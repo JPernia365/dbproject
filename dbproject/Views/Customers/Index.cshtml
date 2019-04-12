@@ -1,0 +1,64 @@
+﻿@model IEnumerable<dbproject.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.employee_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer_first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer_last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customer_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_of_birth)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.employee_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_birth)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.customer_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.customer_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.customer_id })
+        </td>
+    </tr>
+}
+
+</table>
