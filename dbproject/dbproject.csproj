@@ -125,6 +125,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Access_levelController.cs" />
+    <Compile Include="Controllers\Company_ExpensesController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\InvoicesController.cs" />
+    <Compile Include="Controllers\Order_detailsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
+    <Compile Include="Controllers\RewardsController.cs" />
+    <Compile Include="Controllers\SuppliersController.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Access_level.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -132,7 +142,6 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Company_Expenses.cs" />
     <Compile Include="Controllers\CoffeeController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -142,7 +151,7 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Order_details.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\qahwa.cs" />
+    <Compile Include="qahwa.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Reward.cs" />
     <Compile Include="Models\Supplier.cs" />
@@ -189,8 +198,51 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Coffee\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Customer\Details.cshtml" />
-    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Company_Expenses\Create.cshtml" />
+    <Content Include="Views\Company_Expenses\Delete.cshtml" />
+    <Content Include="Views\Company_Expenses\Details.cshtml" />
+    <Content Include="Views\Company_Expenses\Edit.cshtml" />
+    <Content Include="Views\Company_Expenses\Index.cshtml" />
+    <Content Include="Views\Access_level\Create.cshtml" />
+    <Content Include="Views\Access_level\Delete.cshtml" />
+    <Content Include="Views\Access_level\Details.cshtml" />
+    <Content Include="Views\Access_level\Edit.cshtml" />
+    <Content Include="Views\Access_level\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Invoices\Create.cshtml" />
+    <Content Include="Views\Invoices\Delete.cshtml" />
+    <Content Include="Views\Invoices\Details.cshtml" />
+    <Content Include="Views\Invoices\Edit.cshtml" />
+    <Content Include="Views\Invoices\Index.cshtml" />
+    <Content Include="Views\Order_details\Create.cshtml" />
+    <Content Include="Views\Order_details\Delete.cshtml" />
+    <Content Include="Views\Order_details\Details.cshtml" />
+    <Content Include="Views\Order_details\Edit.cshtml" />
+    <Content Include="Views\Order_details\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Details.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
+    <Content Include="Views\Rewards\Create.cshtml" />
+    <Content Include="Views\Rewards\Delete.cshtml" />
+    <Content Include="Views\Rewards\Details.cshtml" />
+    <Content Include="Views\Rewards\Edit.cshtml" />
+    <Content Include="Views\Rewards\Index.cshtml" />
+    <Content Include="Views\Suppliers\Create.cshtml" />
+    <Content Include="Views\Suppliers\Delete.cshtml" />
+    <Content Include="Views\Suppliers\Details.cshtml" />
+    <Content Include="Views\Suppliers\Edit.cshtml" />
+    <Content Include="Views\Suppliers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

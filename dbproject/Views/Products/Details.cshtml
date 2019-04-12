@@ -1,0 +1,75 @@
+﻿@model dbproject.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.category_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.category_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Company_Expenses1.expenses_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company_Expenses1.expenses_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Supplier.supplier_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier.supplier_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.product_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.perishable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.perishable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.exp_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.exp_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.product_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

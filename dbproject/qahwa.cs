@@ -8,7 +8,7 @@ namespace dbproject
     public partial class qahwa : DbContext
     {
         public qahwa()
-            : base("name=qahwa")
+            : base("qahwa")
         {
         }
 
