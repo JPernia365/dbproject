@@ -12,6 +12,7 @@ namespace dbproject.Controllers
     public class CoffeeController : Controller
     {
         
+
        
         // GET: Coffee
         public ActionResult Random()
@@ -59,3 +60,5 @@ namespace dbproject.Controllers
         }
     }
 }
+
+

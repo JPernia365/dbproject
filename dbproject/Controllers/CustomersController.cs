@@ -28,6 +28,10 @@ namespace dbproject.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+
+
+
             Customer customer = db.Customers.Find(id);
             if (customer == null)
             {

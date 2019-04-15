@@ -1,0 +1,269 @@
+﻿body {
+    $body-background: linear-gradient( to right top, #78009c, #663eba, #4d5ed0, #2f79e1, #1291eb );
+    // DEVICE OPTIONS // 18:9 aspect ratio;
+    $aspect-width: 9;
+    $aspect-height: 16;
+    $device-border-radius: 16px;
+    $viewport-width: 350px;
+    $viewport-height: ($viewport-width * $aspect-height) / $aspect-width;
+    $device-scale: 1;
+    $bezel-top: 36px;
+    $bezel-bottom: 24px;
+    $bezel-side: 10px;
+    $bezel-color: linear-gradient( 240deg, #8da4c3 0%, #4f8285 30%, #070f0a 35%, #0a0606 100% );
+    *
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: $body-background;
+}
+
+.device {
+    position: relative;
+    border-radius: $device-border-radius;
+    margin: 0 auto;
+    display: inline-block;
+    transform: scale($device-scale);
+    .device-bezel
+
+{
+    border-radius: inherit;
+    padding: $bezel-top $bezel-side $bezel-bottom $bezel-side;
+    overflow: hidden;
+    background: $bezel-color;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.device-viewport {
+    contain: strict;
+    width: $viewport-width;
+    height: $viewport-height;
+    background: white;
+    border-radius: inherit;
+    transform: scale(1);
+}
+
+}
+
+// ADD YOUR SCSS HERE
+
+//.device-viewport will modify the screen container
+// you can adjust the variables above for a different device look and feel.
+
+//
+* {
+    font-family: "Montserrat", sans-serif;
+    user-select: none;
+}
+
+.container {
+    background: transparent;
+    height: 100%;
+}
+
+.content {
+    background: white;
+    img
+
+{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+}
+
+.body-content {
+    padding: 16px;
+    h3
+
+{
+    margin-bottom: 16px;
+}
+
+p {
+    line-height: 1.5em;
+    margin-bottom: 8px;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    border-radius: 1000px;
+    background: cyan;
+    border: none;
+    outline: none;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+}
+
+.pin-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    background: #EAEAEA;
+}
+
+.pin-display {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+}
+
+.keypad {
+    padding: 16px;
+    background: white;
+}
+
+.keypad--row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keypad--button {
+    font-family: "Montserrat", sans-serif;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 100ms ease-out;
+    &:active
+
+{
+    background: #EAEAEA;
+}
+
+}
+
+.confirmation-dots {
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &.error
+
+{
+    animation-name: shake;
+    animation-duration: 300ms;
+}
+
+svg {
+    height: 24px;
+    max-height: 24px;
+    width: 139px;
+}
+
+.pin-circle {
+    transition: all 100ms ease-out;
+    fill: white;
+    stroke-width: 2px;
+    stroke: black;
+    outline-offset: -2px;
+    outline-width: 2px;
+    &.entered
+
+{
+    fill: black;
+}
+
+&.success {
+    fill: green;
+    stroke: green;
+}
+
+&.error {
+    fill: red;
+    stroke: red;
+}
+
+}
+}
+
+.circle-lock--container {
+    height: 72px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.circle-lock {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 1000px;
+    position: relative;
+    top: -40px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .lock-icon
+
+{
+    color: #333;
+}
+
+}
+
+.page-title {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.pin-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+}
